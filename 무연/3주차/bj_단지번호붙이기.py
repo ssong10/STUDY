@@ -1,5 +1,15 @@
 import sys
+from collection import deque
 sys.setrecursionlimit(10000)
+
+def DFS(i, j):
+    global c
+    c += 1
+    apart_list[i][j] = 0
+    for num in range(4):
+        if -1 < i+x[num] < n and -1 < j+y[num] < n:
+            if apart_list[i+x[num]][j+y[num]]:
+                DFS(i+x[num], j+y[num])
 
 def DFS(i, j):
     global c
