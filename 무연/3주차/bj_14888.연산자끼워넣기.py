@@ -19,7 +19,7 @@ def back(num, count):
                     if num > 0:
                         nxt = num // numbers[count]
                         back(nxt, count + 1)
-                    elif num < 0:
+                    elif num <= 0:
                         nxt = -(abs(num) // numbers[count])
                         back(nxt, count + 1)
                 operator[i] += 1
